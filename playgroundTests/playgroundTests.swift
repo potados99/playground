@@ -2,7 +2,7 @@
 //  playgroundTests.swift
 //  playgroundTests
 //
-//  Created by POTADOS on 2020/12/21.
+//  Created by Potados on 2020/12/21.
 //
 
 import XCTest
