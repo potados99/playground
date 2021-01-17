@@ -9,12 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
 
-    var body: some View {
-        Text("Haha yeah!")
-            .padding()
+    @State private var showingAlert = false
 
-        Text("Hello, world!")
-            .padding()
+    var body: some View {
+        
+        VStack {
+            Text("히히히히히히ㅣㅎ!")
+                .padding()
+            
+            Button(action: {showingAlert = true}) {
+                Text("눌러바!")
+                    .padding(15)
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .cornerRadius(40)
+            }
+            .alert(isPresented: $showingAlert) {
+                Alert(
+                    title: Text("오"),
+                    message: Text("잘했어"),
+                    dismissButton: .default(Text("응")))
+            }
+        }
+        
     }
 }
 
